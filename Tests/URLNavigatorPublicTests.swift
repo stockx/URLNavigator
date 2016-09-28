@@ -60,11 +60,10 @@ class URLNavigatorPublicTests: XCTestCase {
             "Hello"
         )
 
-        XCTAssertNil(self.navigator.viewControllerForURL("http://"))
-        XCTAssertNil(self.navigator.viewControllerForURL("https://"))
+        XCTAssert(self.navigator.viewControllerForURL("http://") is WebViewController)
+        XCTAssert(self.navigator.viewControllerForURL("https://") is WebViewController)
         XCTAssert(self.navigator.viewControllerForURL("http://xoul.kr") is WebViewController)
         XCTAssert(self.navigator.viewControllerForURL("http://xoul.kr/resume") is WebViewController)
-        XCTAssert(self.navigator.viewControllerForURL("http://google.com/search?q=URLNavigator") is WebViewController)
         XCTAssert(self.navigator.viewControllerForURL("http://google.com/search?q=URLNavigator") is WebViewController)
         XCTAssert(self.navigator.viewControllerForURL("http://google.com/search/?q=URLNavigator") is WebViewController)
     }
@@ -155,11 +154,10 @@ class URLNavigatorPublicTests: XCTestCase {
         XCTAssert(self.navigator.viewControllerForURL("/post/123") is PostViewController)
         XCTAssert(self.navigator.viewControllerForURL("/post/hello-world") is PostViewController)
 
-        XCTAssertNil(self.navigator.viewControllerForURL("http://"))
-        XCTAssertNil(self.navigator.viewControllerForURL("https://"))
+        XCTAssert(self.navigator.viewControllerForURL("http://") is WebViewController)
+        XCTAssert(self.navigator.viewControllerForURL("https://") is WebViewController)
         XCTAssert(self.navigator.viewControllerForURL("http://xoul.kr") is WebViewController)
         XCTAssert(self.navigator.viewControllerForURL("http://xoul.kr/resume") is WebViewController)
-        XCTAssert(self.navigator.viewControllerForURL("http://google.com/search?q=URLNavigator") is WebViewController)
         XCTAssert(self.navigator.viewControllerForURL("http://google.com/search?q=URLNavigator") is WebViewController)
         XCTAssert(self.navigator.viewControllerForURL("http://google.com/search/?q=URLNavigator") is WebViewController)
     }
