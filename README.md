@@ -1,7 +1,7 @@
 URLNavigator
 ============
 
-![Swift](https://img.shields.io/badge/Swift-3.0-orange.svg)
+![Swift](https://img.shields.io/badge/Swift-4.0-orange.svg)
 [![CocoaPods](http://img.shields.io/cocoapods/v/URLNavigator.svg)](https://cocoapods.org/pods/URLNavigator)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Build Status](https://travis-ci.org/devxoul/URLNavigator.svg?branch=master)](https://travis-ci.org/devxoul/URLNavigator)
@@ -85,10 +85,16 @@ final class UserViewController: UIViewController, URLNavigable {
 Installation
 ------------
 
-- **For iOS 8+ projects** with [CocoaPods](https://cocoapods.org):
+- **For iOS 8+ projects** with [CocoaPods](https://cocoapods.org) and **Swift 4+**:
 
     ```ruby
     pod 'URLNavigator'
+    ```
+    
+- **For iOS 8+ projects** with [CocoaPods](https://cocoapods.org) and **Swift 3**:
+
+    ```ruby
+    pod 'URLNavigator', '~> 1.0'
     ```
 
 - **For iOS 8+ projects** with [Carthage](https://github.com/Carthage/Carthage):
